@@ -34,7 +34,10 @@ def api_predict():
     """
     For rendering results on REST
     """
-    int_features = [float(x) for x in request.form.values()]
+    int_features = []
+    for k, v in request.json.items():
+        print(k,v)
+        int_features.append(v)
     final_features = [np.array(int_features)]
     prediction = model.predict(final_features)
     output = round(prediction[0], 2)
