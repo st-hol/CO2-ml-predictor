@@ -11,7 +11,7 @@ X = df[['ENGINESIZE','CYLINDERS','FUELCONSUMPTION_CITY','FUELCONSUMPTION_HWY','F
 y = df['CO2EMISSIONS']  # Replace with your actual target column name
 
 # Split the data into training and testing sets
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.211, random_state=42)
 
 # Train a linear regression model
 lr = LinearRegression()
